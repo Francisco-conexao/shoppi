@@ -65,7 +65,6 @@ export class NegocioPage implements OnInit {
         })
     }
 
-
     //Carga el mapa en la lat y lng del negocio -----------------------------------------------
     loadMap(){
         let mapEle: HTMLElement = document.getElementById('map');

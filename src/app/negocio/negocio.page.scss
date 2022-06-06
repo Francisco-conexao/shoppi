@@ -1,0 +1,125 @@
+ion-header{
+    ion-toolbar{
+        background: none;
+        --background: none;
+        --ion-color-base: none !important;
+    }
+}
+ion-content{
+    top: calc(-44px);
+    --offset-bottom: 40px!important;
+    #container{
+        .imgFull{
+            float: left;
+            width: 100%;
+        }
+        h1{
+            float: left;
+            width: 100%;
+            padding: 0px 20px;
+            text-align: center;
+            margin-bottom: 0px;
+        }
+        p{
+            float: left;
+            width: 100%;
+            padding: 0px 20px; 
+            text-align: center;
+            margin-top: 5px;
+            font-size: 14px;
+        }
+        .box_telefonos{
+            float: left;
+            width: 100%;
+            padding: 0px 30px;
+            display: flex;
+            margin-bottom: 15px;
+            a{
+                float: left;
+                width: 100%;
+                text-align: center;
+                margin: 0px 15px;
+                background: var(--naranja);
+                padding: 5px 10px;
+                border-radius: 30px;
+                color: #fff;
+                text-decoration: none;
+            }
+        }
+        ul{
+            float: left;
+            width: 100%;
+            padding: 0px 20px;
+            list-style: none;
+            margin-top: 0px;
+            padding-bottom: 10px;
+            li{
+                float: left;
+                width: 100%;
+                font-size: 14px;
+                padding: 10px 10px;
+                box-shadow: 0 7px 15px 2px rgba(60, 128, 209, 0.09);
+                margin-bottom: 7px;
+                border-radius: 8px;
+                position: relative;
+                background: #fff;
+                span{
+                    float: left;
+                    width: 100%;
+                    padding-left: 30px;
+                }
+                img{
+                    width: 20px;
+                    top: 0px;
+                    bottom: 0px;
+                    margin: auto;
+                    position: absolute;
+                }
+            }
+        }
+        .degradado{
+            float: left;
+            width: 100%;
+            padding-top: 20px;
+            background-image: linear-gradient(0deg, #ffffff00 0%, rgba(255, 255, 255, 1) 40%);
+        }
+        .info{
+            float: left;
+            width: 100%;
+            padding: 0px 20px;
+            margin-bottom: 15px;
+            font-size: 15px;
+            position: relative;
+            padding-left: 50px;
+            img{
+                float: left;
+                width: 20px;
+                position: absolute;
+                top: 0px;
+                left: 20px;
+            }
+            strong{
+                font-weight: 500;
+                float: left;
+                width: 100%;
+            }
+        }
+        .box_mapa{
+            width: 100%;
+            float: left;
+            padding: 10px 20px;
+            margin-bottom: 20px;
+            #map{
+                position: relative;
+                width: 100%;
+                float: left;
+                height: 300px;
+                box-shadow: 0 7px 15px 2px rgba(60, 128, 209, 0.09);
+                border-radius: 10px;
+                .gmnoprint, .gm-style-cc, a div img{
+                    display: none;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,31 @@
+<ion-header [translucent]="true">
+    <ion-toolbar mode="ios">
+        <ion-buttons slot="start">
+            <ion-button (click)="regresar()"><ion-icon name="chevron-back-outline"></ion-icon></ion-button>
+        </ion-buttons>
+        <ion-title></ion-title>
+    </ion-toolbar>
+</ion-header>
+<ion-content [fullscreen]="true">
+    <div id="container">
+        <img class="imgFull" [src]="negocio.imgFull" alt="">
+        <h1>{{negocio.nombre}}</h1>
+        <p>{{negocio.descripcion}}</p>
+        <div class="box_telefonos">
+            <a href="tel:{{negocio.telefono}}">Llamar</a>
+            <a href="https://api.whatsapp.com/send?phone=+52{{negocio.whatsapp}}">Whatsapp</a>
+        </div>
+        <ul>
+            <li *ngFor="let producto of productos"><img src="assets/icon/selec.png"><span>{{producto.nombre}}</span></li> 
+        </ul>
+        <div class="degradado">
+            <span class="info" *ngIf="calle != null"><img src="assets/icon/ubicacion.png"><strong>Dirección:</strong>{{negocio.calle}} #{{negocio.numero}}</span>
+            <span class="info"><img src="assets/icon/horario.png"><strong>Horario de atención:</strong>{{negocio.dias}}</span>
+            <span class="info" *ngIf="negocio.envio == 1"><img src="assets/icon/envio.png"><strong>Método de entrega:</strong>Envío a domicilio sin costo</span>
+            <span class="info" *ngIf="negocio.envio == 0"><img src="assets/icon/envio.png"><strong>Método de entrega:</strong>No tiene envío a domicilio</span>
+            <span class="info" *ngIf="negocio.envio == 2"><img src="assets/icon/envio.png"><strong>Método de entrega:</strong>Envío a domicilio con costo</span>
+            <span class="info"><img src="assets/icon/forma_pago.png"><strong>Formas de pago:</strong>{{negocio.forma_pago}}</span>
+            <div class="box_mapa" *ngIf="calle != null"><div id="map"></div></div>
+        </div>
+    </div>
+</ion-content>

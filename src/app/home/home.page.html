@@ -1,20 +1,33 @@
 <ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Blank
-    </ion-title>
-  </ion-toolbar>
+    <ion-toolbar>
+        <ion-title><img src="assets/logotipo.png"></ion-title>
+    </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
-
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
-  </div>
+    <div id="container">
+        <div class="box_search">
+            <ion-searchbar (ionInput)="getItems($event)" placeholder="Buscar" mode="ios"></ion-searchbar>
+        </div>
+        <ion-slides class="box_categorias" pager="false" [(options)]="slideOpts">
+            <ion-slide class="categoria {{(categoriaElg == 0)?'active':''}}" (click)="categoriaElg = 0;listarNegocios();"><span>Todos</span></ion-slide>
+            <ion-slide class="categoria {{(categoriaElg == categoria.id)?'active':''}}" (click)="categoriaElg = categoria.id;listarNegocios();" *ngFor="let categoria of categorias"><span>{{categoria.nombre}}</span></ion-slide>
+        </ion-slides>
+        <ion-slides class="box_promos" pager="true" [(options)]="slideOpts2">
+            <ion-slide *ngFor="let promo of promos"><img [src]="promo.img" (click)="verPromo(promo.id_negocio)"></ion-slide>
+        </ion-slides>
+        
+        <div class="container_items">
+            <div class="box_item" *ngFor="let negocio of negocios" (click)="verNegocio(negocio)">
+                <div class="box_img"><img [src]="negocio.img"></div>
+                <div class="box_info">
+                    <h3>{{negocio.nombre}}</h3>
+                    <span class="categoria">{{negocio.categoria}}</span>
+                    <span class="horarios">{{negocio.hora_ini}} a {{negocio.hora_fin}}</span>
+                    <span class="envio" *ngIf="negocio.envio == 1">Envío a domicilio</span>
+                    <span class="envio" *ngIf="negocio.envio == 2">Envío a domicilio</span>
+                </div>
+            </div>
+        </div>
+    </div>
 </ion-content>

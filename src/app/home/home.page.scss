@@ -1,27 +1,116 @@
+
 #container {
-  text-align: center;
-
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 50%;
-  transform: translateY(-50%);
-}
-
-#container strong {
-  font-size: 20px;
-  line-height: 26px;
-}
-
-#container p {
-  font-size: 16px;
-  line-height: 22px;
-
-  color: #8c8c8c;
-
-  margin: 0;
-}
-
-#container a {
-  text-decoration: none;
+    .box_search{
+        float: left;
+        width: 100%;
+        padding: 0px 10px; 
+    }
+    .box_categorias{
+        float: left;
+        width: 100%;
+        display: flex;
+        padding: 5px 15px;
+        margin-bottom: 10px;
+        .categoria{
+            float: left;
+            display: initial;
+            width: 100%;
+            background: #fff;
+            box-shadow: 0 1px 5px 0 rgba(0,0,0,0.15);
+            border-radius: 30px;
+            padding: 7px 10px;
+            span{
+                color: #444444;
+                font-size: 13px;
+                text-align: center;
+                float: left;
+                width: 100%;
+            }
+        }
+        .categoria.active{
+            background: var(--morado);
+            span{
+                color: #fff;
+            }
+        }
+    }
+    .box_promos{
+        float: left;
+        width: 100%;
+        display: flex;
+        padding: 5px 20px;
+        margin-bottom: 10px;
+        --bullet-background-active: #fff;
+        ion-slide{
+            border-radius: 8px;
+            img{
+                border-radius: 8px;
+            }
+        }
+    }
+    .container_items{
+        float: left;
+        width: 100%;
+        padding: 5px 20px;
+        .box_item{
+            width: 100%;
+            float: left;
+            border-radius: 15px 15px 15px 15px;
+            box-shadow: 0 7px 15px 2px rgba(60, 128, 209, 0.09);
+            margin-bottom: 15px;
+            padding: 10px;
+            background: #fff;
+            .box_img{
+                float: left;
+                width: 90px;
+                position: relative;
+                height: 90px;
+                overflow: hidden;
+                border-radius: 8px;
+                img{
+                    float: left;
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+            .box_info{
+                width: calc(100% - 100px);
+                float: left;
+                padding: 0px 10px 0px 10px;
+                border-radius: 0px 0px 15px 15px;
+                h3{
+                    float: left;
+                    font-size: 17px;
+                    color: #333;
+                    letter-spacing: -0.44px;
+                    font-weight: 500;
+                    margin: 0px;
+                    width: 100%;
+                    text-align: left;
+                }
+                .categoria{
+                    font-size: 13px;
+                    color: #333;
+                    width: 100%;
+                    float: left;
+                    margin-top: 5px;
+                }
+                .horarios{
+                    font-size: 13px;
+                    color: #333;
+                    width: 100%;
+                    float: left;
+                }
+                .envio{
+                    font-size: 13px;
+                    color: #fff;
+                    float: left;
+                    background: var(--morado);
+                    padding: 3px 10px;
+                    margin-top: 5px;
+                    border-radius: 30px;
+                }
+            }
+        } 
+    }       
 }

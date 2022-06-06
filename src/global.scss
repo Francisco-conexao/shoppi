@@ -24,3 +24,28 @@
 @import "~@ionic/angular/css/text-alignment.css";
 @import "~@ionic/angular/css/text-transformation.css";
 @import "~@ionic/angular/css/flex-utils.css";
+
+
+ion-header{
+    ion-toolbar{
+        --background: #F3F5F9;
+        --border-style: hidden;
+        ion-button{
+            --color: #000;
+        }
+    }
+    ion-title{
+        text-align: center;
+        img{
+            height: 33px;
+        }
+    }
+}
+ion-content{
+    --background: #F3F5F9;
+}
+
+//android-----------------------------------
+.header-md::after {
+    background-image: none!important;
+}

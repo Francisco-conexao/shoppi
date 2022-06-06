@@ -1,5 +1,7 @@
 {
   "name": "Adventistas",
-  "integrations": {},
+  "integrations": {
+    "cordova": {}
+  },
   "type": "angular"
 }
